@@ -46,7 +46,7 @@ export const HomeView = () => {
     const routeEtaQuery = useQueries(
         config?.data?.map(it => (
             {
-                queryKey: ["routeEta", it.routeNumber, it.service_type, it.seq],
+                queryKey: ["routeEta", it.routeNumber,it.service_type, it.direction, it.seq],
                 queryFn: async (q) => ({ request: it, eta: await routeEtaQueryFn(it) }),
                 refetchInterval: 10000,
                 cacheTime: 0
@@ -86,7 +86,7 @@ export const HomeView = () => {
             type: "subscribedRouteStop",
             version: "1.0",
             generated_timestamp: moment().toDate(),
-            data: configQuery?.data?.data?.filter(it => it !== data) ?? [] as SubScribedRouteStopData[]
+            data: config?.data?.filter(it => it !== data) ?? [] as SubScribedRouteStopData[]
         } as GenericResponse<SubScribedRouteStopData[]>;
         var query = await fetch(`https://api.github.com/gists/${pasteKey}`, {
             method: "PATCH",
@@ -112,7 +112,7 @@ export const HomeView = () => {
             type: "subscribedRouteStop",
             version: "1.0",
             generated_timestamp: moment().toDate(),
-            data: [...configQuery?.data?.data ?? [], data ] as SubScribedRouteStopData[]
+            data: [...config?.data ?? [], data ] as SubScribedRouteStopData[]
         } as GenericResponse<SubScribedRouteStopData[]>;
         var query = await fetch(`https://api.github.com/gists/${pasteKey}`, {
             method: "PATCH",

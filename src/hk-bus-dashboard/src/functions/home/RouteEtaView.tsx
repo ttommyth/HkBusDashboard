@@ -81,10 +81,16 @@ export const RouteEtaView = (props: RouteEtaViewProps) => {
                 {transformedData?.map((it, idx) => <>
                     <Box display="flex" key={"etaRow" + idx}>
                         <Box flexGrow={1}>
+                            {it.etaData.eta==null ?
+                            <Typography variant={idx === 0 ? "h2" : idx === 1 ? "h5" : "h6"} display="inline">
+                                {t("route_not_available")}
+                            </Typography>
+                            :<>
                             <Typography variant={idx === 0 ? "h2" : idx === 1 ? "h5" : "h6"} display="inline">
                                 {moment(it.etaData.eta)?.locale(i18n.language)?.from(now)}
                             </Typography>
                             <Chip label={moment(it.etaData.eta)?.format("HH:mm")} />
+                            </>}
                         </Box>
                         <Box>
                         </Box>

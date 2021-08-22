@@ -152,7 +152,7 @@ export const AddRouteView =(props: AddRouteProps )=>{
 }
 {seq&&
 <Button variant="contained" color="primary" onClick={()=>handleSubmit()}>
-  Add to monitor list
+  {t("addToMonitorList")}
   </Button>
 }
         </CardContent>

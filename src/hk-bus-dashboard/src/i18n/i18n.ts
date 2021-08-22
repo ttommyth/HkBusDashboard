@@ -10,19 +10,22 @@ const resources = {
   en: {
     translation: {
       "Welcome to React": "Welcome to React and react-i18next",
-      "add_route":"Add Route"
+      "add_route":"Add Route",
+      "route_not_available":"Route not available", 
     }
   },
   "zh-HK": {
     translation: {
       "Welcome to React": "Bienvenue à React et react-i18next",
-      "add_route":"新堵路線"
+      "add_route":"新增路線",
+      "route_not_available":"未有可用班次", 
     }
   },
   "zh-CN": {
     translation: {
       "Welcome to React": "Bienvenue à React et react-i18next",
-      "add_route":"新堵路線"
+      "add_route":"新增路線",
+      "route_not_available":"未有可用班次", 
     }
   }
 };
