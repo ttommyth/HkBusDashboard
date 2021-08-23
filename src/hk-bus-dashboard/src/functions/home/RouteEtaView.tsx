@@ -17,7 +17,7 @@ export interface RouteEtaViewProps {
         request: SubScribedRouteStopData,
         eta: RouteEtaData[],
     }
-    stops: {[key:string]: StopData},
+    stops: { [key: string]: StopData },
     routeStops: RouteStopData[],
     onRemoveClicked: (item: SubScribedRouteStopData) => void
 }
@@ -43,12 +43,12 @@ export const RouteEtaView = (props: RouteEtaViewProps) => {
         }))
     }, [data])
     const targetStop = React.useMemo(() => {
-        if(data &&stops && routeStops ){
+        if (data && stops && routeStops) {
             var target = data?.request;
-             return stops[
-                 routeStops
-                     .find(rs => rs.route === target?.routeNumber && rs.bound === target?.direction && rs.seq === target?.seq?.toString())?.stop ?? ""
-             ]
+            return stops[
+                routeStops
+                    .find(rs => rs.route === target?.routeNumber && rs.bound === target?.direction && rs.seq === target?.seq?.toString())?.stop ?? ""
+            ]
         }
         return null;
     }, [data, stops, routeStops])
@@ -79,19 +79,24 @@ export const RouteEtaView = (props: RouteEtaViewProps) => {
             </CardHeader>
             <CardContent>
 
+                {(transformedData == null || transformedData.length <= 0) &&
+                    <Typography variant={"h2"} display="inline">
+                        {t("route_not_available")}
+                    </Typography>
+                }
                 {transformedData?.map((it, idx) => <>
                     <Box display="flex" key={"etaRow" + idx}>
                         <Box flexGrow={1}>
-                            {it.etaData.eta==null ?
-                            <Typography variant={idx === 0 ? "h2" : idx === 1 ? "h5" : "h6"} display="inline">
-                                {t("route_not_available")}
-                            </Typography>
-                            :<>
-                            <Typography variant={idx === 0 ? "h2" : idx === 1 ? "h5" : "h6"} display="inline">
-                                {moment(it.etaData.eta)?.locale(i18n.language)?.from(now)}
-                            </Typography>
-                            <Chip label={moment(it.etaData.eta)?.format("HH:mm")} />
-                            </>}
+                            {it.etaData.eta == null ?
+                                <Typography variant={idx === 0 ? "h2" : idx === 1 ? "h5" : "h6"} display="inline">
+                                    {t("route_not_available")}
+                                </Typography>
+                                : <>
+                                    <Typography variant={idx === 0 ? "h2" : idx === 1 ? "h5" : "h6"} display="inline">
+                                        {moment(it.etaData.eta)?.locale(i18n.language)?.from(now)}
+                                    </Typography>
+                                    <Chip label={moment(it.etaData.eta)?.format("HH:mm")} />
+                                </>}
                         </Box>
                         <Box>
                         </Box>
