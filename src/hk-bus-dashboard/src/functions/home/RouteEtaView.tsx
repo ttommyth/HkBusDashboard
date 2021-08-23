@@ -17,7 +17,7 @@ export interface RouteEtaViewProps {
         request: SubScribedRouteStopData,
         eta: RouteEtaData[],
     }
-    stops: StopData[],
+    stops: {[key:string]: StopData},
     routeStops: RouteStopData[],
     onRemoveClicked: (item: SubScribedRouteStopData) => void
 }
@@ -44,10 +44,11 @@ export const RouteEtaView = (props: RouteEtaViewProps) => {
     }, [data])
     const targetStop = React.useMemo(() => {
         if(data &&stops && routeStops ){
-        var target = data?.request;
-        return stops.find(s => s.stop ===
-            routeStops
-                .find(rs => rs.route === target?.routeNumber && rs.bound === target?.direction && rs.seq === target?.seq?.toString())?.stop)
+            var target = data?.request;
+             return stops[
+                 routeStops
+                     .find(rs => rs.route === target?.routeNumber && rs.bound === target?.direction && rs.seq === target?.seq?.toString())?.stop ?? ""
+             ]
         }
         return null;
     }, [data, stops, routeStops])

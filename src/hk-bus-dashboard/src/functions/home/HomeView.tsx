@@ -75,6 +75,16 @@ export const HomeView = () => {
         cacheTime: 86400000
     })
 
+    const stopDictionary = React.useMemo<{[key:string]:StopData }>(() => {
+        var result ={} as {[key:string]: StopData};
+        if(stopQuery.data ){
+            stopQuery.data.data.forEach(it=>{
+                result[it.stop] = it;
+            })
+        }
+        return result;
+    }, [stopQuery.data])
+
     React.useEffect(()=>{
         if(configQuery.data){
             setConfig(configQuery.data)
@@ -144,7 +154,7 @@ export const HomeView = () => {
                             <Grid item xs={12} xl={4} md={6} key={"eta" + idx}>
                                 <RouteEtaView
                                     onRemoveClicked={(it)=>handleRemoveClicked(it)}
-                                    stops={stopQuery.data?.data ?? []}
+                                    stops={stopDictionary ?? {}}
                                     data={it.data as any}
                                     routeStops={routeStopQuery.data?.data ?? []} />
                             </Grid>
