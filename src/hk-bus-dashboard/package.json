@@ -1,6 +1,6 @@
 {
   "name": "hk-bus-dashboard",
-  "homepage": "https://ttommyth.github.io/HkBusDashboard/", 
+  "homepage": "https://bus.everywareengineer.com/", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
