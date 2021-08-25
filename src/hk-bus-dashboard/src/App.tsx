@@ -17,7 +17,7 @@ const App = ()=> {
   const theme = useTheme();
   return (
     <>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <LayoutView>
 
