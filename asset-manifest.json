@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/HkBusDashboard/static/css/main.5739ad41.chunk.css",
-    "main.js": "/HkBusDashboard/static/js/main.58e30f73.chunk.js",
-    "main.js.map": "/HkBusDashboard/static/js/main.58e30f73.chunk.js.map",
+    "main.js": "/HkBusDashboard/static/js/main.dbbdac84.chunk.js",
+    "main.js.map": "/HkBusDashboard/static/js/main.dbbdac84.chunk.js.map",
     "runtime-main.js": "/HkBusDashboard/static/js/runtime-main.9481a2a1.js",
     "runtime-main.js.map": "/HkBusDashboard/static/js/runtime-main.9481a2a1.js.map",
-    "static/js/2.5c8d6bf8.chunk.js": "/HkBusDashboard/static/js/2.5c8d6bf8.chunk.js",
-    "static/js/2.5c8d6bf8.chunk.js.map": "/HkBusDashboard/static/js/2.5c8d6bf8.chunk.js.map",
+    "static/js/2.9d56bb34.chunk.js": "/HkBusDashboard/static/js/2.9d56bb34.chunk.js",
+    "static/js/2.9d56bb34.chunk.js.map": "/HkBusDashboard/static/js/2.9d56bb34.chunk.js.map",
     "static/js/3.8727df91.chunk.js": "/HkBusDashboard/static/js/3.8727df91.chunk.js",
     "static/js/3.8727df91.chunk.js.map": "/HkBusDashboard/static/js/3.8727df91.chunk.js.map",
     "index.html": "/HkBusDashboard/index.html",
     "static/css/main.5739ad41.chunk.css.map": "/HkBusDashboard/static/css/main.5739ad41.chunk.css.map",
-    "static/js/2.5c8d6bf8.chunk.js.LICENSE.txt": "/HkBusDashboard/static/js/2.5c8d6bf8.chunk.js.LICENSE.txt"
+    "static/js/2.9d56bb34.chunk.js.LICENSE.txt": "/HkBusDashboard/static/js/2.9d56bb34.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9481a2a1.js",
-    "static/js/2.5c8d6bf8.chunk.js",
+    "static/js/2.9d56bb34.chunk.js",
     "static/css/main.5739ad41.chunk.css",
-    "static/js/main.58e30f73.chunk.js"
+    "static/js/main.dbbdac84.chunk.js"
   ]
 }
