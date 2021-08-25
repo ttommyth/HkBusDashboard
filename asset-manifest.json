@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/HkBusDashboard/static/css/main.5739ad41.chunk.css",
-    "main.js": "/HkBusDashboard/static/js/main.dbbdac84.chunk.js",
-    "main.js.map": "/HkBusDashboard/static/js/main.dbbdac84.chunk.js.map",
+    "main.js": "/HkBusDashboard/static/js/main.74eaa9b9.chunk.js",
+    "main.js.map": "/HkBusDashboard/static/js/main.74eaa9b9.chunk.js.map",
     "runtime-main.js": "/HkBusDashboard/static/js/runtime-main.9481a2a1.js",
     "runtime-main.js.map": "/HkBusDashboard/static/js/runtime-main.9481a2a1.js.map",
     "static/js/2.9d56bb34.chunk.js": "/HkBusDashboard/static/js/2.9d56bb34.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9481a2a1.js",
     "static/js/2.9d56bb34.chunk.js",
     "static/css/main.5739ad41.chunk.css",
-    "static/js/main.dbbdac84.chunk.js"
+    "static/js/main.74eaa9b9.chunk.js"
   ]
 }
